@@ -1,0 +1,236 @@
+* {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  box-sizing: border-box!important;
+}
+.modal-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+  z-index: 100;
+  position: relative;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 60px 0 rgba(0, 0, 0, 0.37);
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.modal h2{
+  margin: 5px 0;
+}
+.modal-intro{
+  background-color: #e253e7;
+  padding: 5px;
+  text-align: center;
+  margin-top: 7px;
+}
+.modal-header {
+  position: absolute;
+  top:8px;
+  right:0;
+}
+button {
+  font-size: .9rem;
+  font-weight: 700;
+  border: none;
+  padding: .5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  min-width:80px;
+}
+.btn-save{
+  width: auto;
+  height: 38px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color:white;
+}
+.btn-delete{
+  width: 53px;
+  height: 16px;
+  font-size: 14px;
+  letter-spacing: -0.22px;
+  color: #d0021b;
+  background: transparent;
+  visibility: hidden;
+}
+.btn-delete_edit{
+  width: 53px;
+  height: 16px;
+  font-size: 14px;
+  letter-spacing: -0.22px;
+  color: #d0021b;
+  background: transparent;
+}
+.modal-close-button{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  min-width: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+.button-default {
+  background: #247BA0;
+  color: #fff;
+}
+.form{
+  display: grid;
+  margin: auto;
+  padding-top: 30px;
+}
+.form > *{
+  font-family: HelveticaNeue!important;
+  margin: 5px auto;
+  padding: 5px;
+}
+.form-item{
+  position: relative;
+  width: 60%;
+}
+.form-item input {
+  width: 100%;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.form-item input:focus {
+  border: solid 1px #ced4da;
+}
+.w-100{
+  width:100%;
+}
+input, textarea{
+  border: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  margin-top: 5px;
+}
+input:focus{
+  border: none;
+  border-bottom: 1px solid#247BA0;
+}
+// .data-picker{
+//   background-color: #e0a6e2;
+//   padding: 10px 15px;
+//   cursor: pointer;
+//   margin-top: 15px;
+//   margin-left: 0;
+// }
+.btn-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+.icon{
+  position: absolute;
+  bottom:0;
+  right:0;
+  font-size: 16px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.fa-clock{
+  top:8px;
+}
+.timepicker{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+  -webkit-animation: swing-in-top-bck 0.6s
+  cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+.show-status label{
+  margin-right: 10px;
+}
+.Group {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.modal-first-input{
+  margin-bottom: 19px;
+}
+.modal-first-input, .modal-text-area {
+  width: 85%;
+  font-size: 26px;
+  line-height: 0.92;
+  color: #6c757d;
+}
+.modal-text-area {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+.form-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+}
+.show-status{
+  margin-left: 30px;
+}
+.layout-btn-delete{
+  justify-self: start;
+  align-self: center;
+  margin-left: 15px;
+  line-height: 2;
+}
+.layout-btn-save{
+  justify-self: end;
+  margin-right: 30px;
+}
+.modal__date{
+  margin-left: 35px;
+  color: #8a888a;
+}
+.modal__date * {
+  font-size: 18px;
+}
+.hide{
+  visibility: hidden;
+}
+.error{
+  color:red;
+  margin-left:30px;
+}
+input.errored{
+  border-bottom: solid 1px #f50505;
+}
+
+/* @media */
+@media (max-width: 479px) {
+  .timepicker {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .show-status{
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,101 @@
+$primaryColor: #007bff;
+$secondaryColor: #fff;
+$fontColor: #6c757d;
+@mixin font($size, $lineHeight, $color:$fontColor, $fontWeight: normal) {
+  font: {
+    size: $size;
+    weight: $fontWeight;
+    family: Arial, Helvetica, sans-serif;
+  }
+  color: $color;
+  line-height: $lineHeight;
+}
+
+.login-wrapper{
+  background: rgba(0,0,0, 0.4);
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  height:100vh;
+  z-index:100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  background-color: $secondaryColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:345px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+
+  &__logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__container {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form {
+      h5 {
+        margin-bottom: 5px;
+      }
+      input {
+        margin-bottom: 10px;
+        background-color: $secondaryColor;
+        width: 98%;
+      }
+    }
+    p {
+      margin-top: 15px;
+      // font-size: 12px;
+    }
+
+    button {
+      border-radius: 10px;
+      width: 100%;
+      height: 50px;
+      margin: 5px auto;
+    }
+  }
+
+  &__signInButton {
+    background: $primaryColor;
+    color: $secondaryColor;
+  }
+
+  &__registerButton {
+    background-color: $secondaryColor;
+    border: 1px solid $primaryColor;
+    color: $fontColor;
+  }
+
+  .close{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    cursor: pointer;
+  }
+}
+
